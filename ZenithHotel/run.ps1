@@ -1,4 +1,4 @@
-$FX_PATH = "c:\Users\Student\Desktop\openjfx-21.0.10_windows-x64_bin-sdk\javafx-sdk-21.0.10\lib"
+$FX_PATH = "$PSScriptRoot\..\javafx-sdk-21.0.10\lib"
 
 Write-Host "Compiling Zenith Hotel Suite v2.0..." -ForegroundColor Cyan
 if (!(Test-Path bin)) { New-Item -ItemType Directory -Path bin | Out-Null }
