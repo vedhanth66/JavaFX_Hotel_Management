@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.zenith.GuestDialogController"
+      spacing="20" styleClass="main-container" prefWidth="420">
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30" />
+    </padding>
+
+    <Label text="Guest Information" styleClass="section-header" style="-fx-font-size: 22px;" />
+
+    <VBox spacing="8">
+        <Label text="Full Name *" styleClass="card-title" />
+        <TextField fx:id="nameField" promptText="Enter full name..." />
+    </VBox>
+
+    <VBox spacing="8">
+        <Label text="Email Address *" styleClass="card-title" />
+        <TextField fx:id="emailField" promptText="email@example.com" />
+    </VBox>
+
+    <HBox spacing="15">
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Phone Number" styleClass="card-title" />
+            <TextField fx:id="phoneField" promptText="+1-555-0000" />
+        </VBox>
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Nationality" styleClass="card-title" />
+            <TextField fx:id="nationalityField" promptText="Country" />
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <CheckBox fx:id="vipCheckBox" text="VIP Guest" styleClass="vip-checkbox" />
+    </HBox>
+
+    <Label fx:id="errorLabel" text="" styleClass="error-text" />
+
+    <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-padding: 10 0 0 0;">
+        <Button text="Cancel" onAction="#handleCancel" styleClass="nav-button" />
+        <Button text="Save Guest" onAction="#handleSave" styleClass="accent-button" />
+    </HBox>
+
+</VBox>

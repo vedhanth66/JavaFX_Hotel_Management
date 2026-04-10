@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.zenith.BookingDialogController"
+      spacing="18" styleClass="main-container" prefWidth="500">
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30" />
+    </padding>
+
+    <Label text="New Booking" styleClass="section-header" style="-fx-font-size: 24px;" />
+
+    <!-- Guest Selection -->
+    <VBox spacing="8">
+        <Label text="Select Guest" styleClass="card-title" />
+        <ComboBox fx:id="guestSelectCombo" maxWidth="Infinity" promptText="Choose existing guest..." />
+    </VBox>
+    
+    <VBox spacing="8">
+        <Label text="Or Enter Guest Name" styleClass="card-title" />
+        <TextField fx:id="guestNameField" promptText="New guest name (auto-creates guest)" />
+    </VBox>
+
+    <!-- Room Selection -->
+    <HBox spacing="15">
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Room Type Filter" styleClass="card-title" />
+            <ComboBox fx:id="roomTypeCombo" maxWidth="Infinity" />
+        </VBox>
+    </HBox>
+    
+    <VBox spacing="8">
+        <Label text="Available Room" styleClass="card-title" />
+        <ComboBox fx:id="roomSelectCombo" maxWidth="Infinity" promptText="Select room..." />
+    </VBox>
+
+    <!-- Dates -->
+    <HBox spacing="15">
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Check-in" styleClass="card-title" />
+            <DatePicker fx:id="checkInDate" maxWidth="Infinity" />
+        </VBox>
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Check-out" styleClass="card-title" />
+            <DatePicker fx:id="checkOutDate" maxWidth="Infinity" />
+        </VBox>
+    </HBox>
+
+    <!-- Pricing -->
+    <HBox spacing="30" alignment="CENTER_LEFT" style="-fx-padding: 5 0;">
+        <VBox spacing="4">
+            <Label text="DURATION" styleClass="card-title" />
+            <Label fx:id="nightsLabel" text="0 nights" styleClass="card-value" style="-fx-font-size: 18px;" />
+        </VBox>
+        <VBox spacing="4">
+            <Label text="TOTAL PRICE" styleClass="card-title" />
+            <Label fx:id="priceLabel" text="0" styleClass="card-value-success" style="-fx-font-size: 18px;" />
+        </VBox>
+    </HBox>
+
+    <!-- Notes -->
+    <VBox spacing="8">
+        <Label text="Notes (optional)" styleClass="card-title" />
+        <TextArea fx:id="notesArea" promptText="Special requests..." prefRowCount="2" styleClass="dark-textarea" />
+    </VBox>
+
+    <Label fx:id="errorLabel" text="" styleClass="error-text" />
+
+    <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-padding: 5 0 0 0;">
+        <Button text="Cancel" onAction="#handleCancel" styleClass="nav-button" />
+        <Button text="Confirm Booking" onAction="#handleConfirm" styleClass="accent-button" />
+    </HBox>
+
+</VBox>

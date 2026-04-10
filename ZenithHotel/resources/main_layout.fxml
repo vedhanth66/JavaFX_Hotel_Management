@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.zenith.DashboardController"
+            styleClass="main-container"
+            prefHeight="800.0" prefWidth="1280.0">
+
+    <left>
+        <VBox styleClass="sidebar" spacing="8">
+            <VBox spacing="4" style="-fx-padding: 0 0 20 0;">
+                <Label text="OOSD" styleClass="sidebar-title" />
+                <Label text="HOTELS" style="-fx-text-fill: #64748b; -fx-font-size: 11px; -fx-font-weight: bold; -fx-letter-spacing: 3;" />
+                <Label fx:id="clockLabel" text="" style="-fx-text-fill: #475569; -fx-font-size: 11px; -fx-padding: 8 0 0 0;" />
+            </VBox>
+            
+            <Separator style="-fx-background-color: rgba(255,255,255,0.06);" />
+            
+            <VBox spacing="4" style="-fx-padding: 10 0 0 0;">
+                <Label text="MAIN MENU" style="-fx-text-fill: #475569; -fx-font-size: 10px; -fx-font-weight: bold; -fx-padding: 0 0 6 12;" />
+                <Button fx:id="btnDashboard" text="  Dashboard" styleClass="nav-button" maxWidth="Infinity" onAction="#showDashboard" />
+                <Button fx:id="btnRooms" text="  Room Management" styleClass="nav-button" maxWidth="Infinity" onAction="#showRooms" />
+                <Button fx:id="btnGuests" text="  Guest List" styleClass="nav-button" maxWidth="Infinity" onAction="#showGuests" />
+                <Button fx:id="btnAnalytics" text="  Analytics" styleClass="nav-button" maxWidth="Infinity" onAction="#showAnalytics" />
+            </VBox>
+            
+            <VBox spacing="4" style="-fx-padding: 15 0 0 0;">
+                <Label text="SYSTEM" style="-fx-text-fill: #475569; -fx-font-size: 10px; -fx-font-weight: bold; -fx-padding: 0 0 6 12;" />
+                <Button fx:id="btnSettings" text="  Settings" styleClass="nav-button" maxWidth="Infinity" onAction="#showSettings" />
+            </VBox>
+            
+            <Region VBox.vgrow="ALWAYS" />
+            
+            <Separator style="-fx-background-color: rgba(255,255,255,0.06);" />
+            
+            <!-- Admin Profile Section -->
+            <Button fx:id="btnAdmin" styleClass="nav-button" maxWidth="Infinity" onAction="#showAdmin" style="-fx-padding: 10;">
+                <graphic>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Circle radius="18" fill="#00f2ff" />
+                        <VBox>
+                            <Label text="Admin User" styleClass="card-title" />
+                            <Label text="Hotel Manager" styleClass="room-status-available" style="-fx-font-size: 10px;" />
+                        </VBox>
+                    </HBox>
+                </graphic>
+            </Button>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" />
+    </center>
+
+</BorderPane>

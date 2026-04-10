@@ -1,0 +1,1113 @@
+/* ═══════════════════════════════════════════════════════════
+   ZENITH HOTEL SUITE — PREMIUM DARK THEME
+   v2.0 · Complete JavaFX Stylesheet
+   ═══════════════════════════════════════════════════════════ */
+
+.root {
+    -fx-base: #FAFAFA;
+    -fx-accent: #B5A6D5;
+    -fx-focus-color: #B5A6D5;
+    -fx-faint-focus-color: transparent;
+    -fx-control-inner-background: #FFFFFF;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+
+    /* Custom Palette */
+    -color-bg: #FAFAFA;
+    -color-bg-secondary: #F3F4F6;
+    -color-bg-elevated: #FFFFFF;
+    -color-glass: rgba(0, 0, 0, 0.02);
+    -color-glass-hover: rgba(0, 0, 0, 0.05);
+    -color-glass-border: rgba(0, 0, 0, 0.05);
+    -color-accent: #B5A6D5;
+    -color-accent-dim: rgba(181, 166, 213, 0.25);
+    -color-accent-glow: rgba(181, 166, 213, 0.35);
+    -color-success: #8CB39D;
+    -color-success-dim: rgba(140, 179, 157, 0.25);
+    -color-warning: #E8C17F;
+    -color-warning-dim: rgba(232, 193, 127, 0.25);
+    -color-danger: #D18C9D;
+    -color-danger-dim: rgba(209, 140, 157, 0.25);
+    -color-info: #A4BCD4;
+    -color-info-dim: rgba(164, 188, 212, 0.25);
+    -color-text: #2D3748;
+    -color-text-secondary: #4A5568;
+    -color-text-dim: #718096;
+    border: rgba(0, 0, 0, 0.08);
+    -color-border: rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Main Container ──────────────────────────────────────── */
+.main-container {
+    background-color: linear-gradient(to bottom right, #FAFAFA, #FDFDFD, #F1F4F9);
+    -fx-background-color: linear-gradient(to bottom right, #FAFAFA, #FDFDFD, #F1F4F9);
+}
+
+/* ─── Sidebar ─────────────────────────────────────────────── */
+.sidebar {
+    background-color: linear-gradient(to bottom, #FFFFFF, #F3F4F6, #FFFFFF);
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #F3F4F6, #FFFFFF);
+    padding: 24 16;
+    -fx-padding: 24 16;
+    width: 250;
+    -fx-pref-width: 250;
+    border-color: transparent rgba(0,0,0,0.06) transparent transparent;
+    -fx-border-color: transparent rgba(0,0,0,0.06) transparent transparent;
+    border-width: 0 1 0 0;
+    -fx-border-width: 0 1 0 0;
+}
+
+.sidebar-title {
+    -fx-text-fill: #2D3748;
+    font-size: 22px;
+    -fx-font-size: 22px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+/* ─── Navigation Buttons ──────────────────────────────────── */
+.nav-button {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: #4A5568;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    padding: 11 16;
+    -fx-padding: 11 16;
+    align-items: CENTER_LEFT;
+    -fx-alignment: CENTER_LEFT;
+    cursor: hand;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    border-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.nav-button:hover {
+    -fx-text-fill: #e2e8f0;
+    background-color: rgba(0, 0, 0, 0.02);
+    -fx-background-color: rgba(0, 0, 0, 0.02);
+}
+
+.nav-button-active {
+    -fx-text-fill: #2D3748;
+    background-color: rgba(0, 229, 255, 0.08);
+    -fx-background-color: rgba(0, 229, 255, 0.08);
+    border-color: transparent transparent transparent #B5A6D5;
+    -fx-border-color: transparent transparent transparent #B5A6D5;
+    border-width: 0 0 0 3;
+    -fx-border-width: 0 0 0 3;
+    border-radius: 0 8 8 0;
+    -fx-border-radius: 0 8 8 0;
+    -fx-background-radius: 0 8 8 0;
+}
+
+/* ─── Accent Button (Primary CTA) ────────────────────────── */
+.accent-button {
+    background-color: linear-gradient(to right, #00b8d4, #B5A6D5);
+    -fx-background-color: linear-gradient(to right, #00b8d4, #B5A6D5);
+    -fx-text-fill: #FAFAFA;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    padding: 10 22;
+    -fx-padding: 10 22;
+    -fx-background-radius: 8;
+    cursor: hand;
+    -fx-cursor: hand;
+}
+
+.accent-button:hover {
+    background-color: linear-gradient(to right, #B5A6D5, #26f7ff);
+    -fx-background-color: linear-gradient(to right, #B5A6D5, #26f7ff);
+    -fx-effect: dropshadow(gaussian, rgba(0,229,255,0.35), 12, 0, 0, 0);
+}
+
+/* ─── Danger Button ───────────────────────────────────────── */
+.danger-button {
+    background-color: rgba(209, 140, 157, 0.25);
+    -fx-background-color: rgba(209, 140, 157, 0.25);
+    -fx-text-fill: #D18C9D;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    padding: 10 22;
+    -fx-padding: 10 22;
+    -fx-background-radius: 8;
+    border-color: rgba(239, 68, 68, 0.3);
+    -fx-border-color: rgba(239, 68, 68, 0.3);
+    border-width: 1;
+    -fx-border-width: 1;
+    border-radius: 8;
+    -fx-border-radius: 8;
+    cursor: hand;
+    -fx-cursor: hand;
+}
+
+.danger-button:hover {
+    background-color: rgba(239, 68, 68, 0.25);
+    -fx-background-color: rgba(239, 68, 68, 0.25);
+}
+
+/* ─── Warning Button ──────────────────────────────────────── */
+.warning-button {
+    background-color: rgba(232, 193, 127, 0.25);
+    -fx-background-color: rgba(232, 193, 127, 0.25);
+    -fx-text-fill: #D18C9D;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    padding: 10 22;
+    -fx-padding: 10 22;
+    -fx-background-radius: 8;
+    border-color: rgba(245, 158, 11, 0.3);
+    -fx-border-color: rgba(245, 158, 11, 0.3);
+    border-width: 1;
+    -fx-border-width: 1;
+    border-radius: 8;
+    -fx-border-radius: 8;
+    cursor: hand;
+    -fx-cursor: hand;
+}
+
+.warning-button:hover {
+    background-color: rgba(245, 158, 11, 0.25);
+    -fx-background-color: rgba(245, 158, 11, 0.25);
+}
+
+/* ─── Filter Buttons ──────────────────────────────────────── */
+.filter-button {
+    background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-text-fill: #4A5568;
+    font-size: 12px;
+    -fx-font-size: 12px;
+    padding: 8 18;
+    -fx-padding: 8 18;
+    -fx-background-radius: 20;
+    border-radius: 20;
+    -fx-border-radius: 20;
+    border-color: rgba(0, 0, 0, 0.05);
+    -fx-border-color: rgba(0, 0, 0, 0.05);
+    border-width: 1;
+    -fx-border-width: 1;
+    cursor: hand;
+    -fx-cursor: hand;
+}
+
+.filter-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-text-fill: #2D3748;
+}
+
+.filter-active {
+    background-color: rgba(0, 229, 255, 0.12);
+    -fx-background-color: rgba(0, 229, 255, 0.12);
+    -fx-text-fill: #2D3748;
+    border-color: rgba(0, 229, 255, 0.3);
+    -fx-border-color: rgba(0, 229, 255, 0.3);
+}
+
+/* ─── Glass Card ──────────────────────────────────────────── */
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-radius: 14;
+    border-color: rgba(0, 0, 0, 0.08);
+    -fx-border-color: rgba(0, 0, 0, 0.08);
+    border-radius: 14;
+    -fx-border-radius: 14;
+    border-width: 1;
+    -fx-border-width: 1;
+    padding: 20;
+    -fx-padding: 20;
+}
+
+.glass-card:hover {
+    border-color: rgba(181, 166, 213, 0.25);
+    -fx-border-color: rgba(181, 166, 213, 0.25);
+    background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+}
+
+.stat-card {
+    -fx-spacing: 6;
+}
+
+.stat-mini-card {
+    -fx-spacing: 6;
+    align-items: CENTER;
+    -fx-alignment: CENTER;
+}
+
+/* ─── Card Typography ─────────────────────────────────────── */
+.card-title {
+    -fx-text-fill: #4A5568;
+    font-size: 11px;
+    -fx-font-size: 11px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.card-value {
+    -fx-text-fill: #2D3748;
+    font-size: 28px;
+    -fx-font-size: 28px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.card-value-accent {
+    -fx-text-fill: #2D3748;
+    font-size: 28px;
+    -fx-font-size: 28px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.card-value-success {
+    -fx-text-fill: #8CB39D;
+    font-size: 28px;
+    -fx-font-size: 28px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+/* ─── Room Cards ──────────────────────────────────────────── */
+.room-card {
+    min-width: 155;
+    -fx-min-width: 155;
+    min-height: 155;
+    -fx-min-height: 155;
+    width: 155;
+    -fx-pref-width: 155;
+    height: 155;
+    -fx-pref-height: 155;
+    align-items: CENTER;
+    -fx-alignment: CENTER;
+    -fx-spacing: 5;
+    cursor: hand;
+    -fx-cursor: hand;
+}
+
+.room-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,229,255,0.15), 15, 0, 0, 0);
+}
+
+.room-number {
+    -fx-text-fill: #2D3748;
+    font-size: 16px;
+    -fx-font-size: 16px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+/* ─── Status Badges ───────────────────────────────────────── */
+.room-status-available, .status-badge-available {
+    -fx-text-fill: #8CB39D;
+    font-size: 11px;
+    -fx-font-size: 11px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.status-badge-available {
+    background-color: rgba(34, 197, 94, 0.12);
+    -fx-background-color: rgba(34, 197, 94, 0.12);
+    padding: 3 10;
+    -fx-padding: 3 10;
+    -fx-background-radius: 12;
+}
+
+.room-status-occupied, .status-badge-occupied {
+    -fx-text-fill: #D18C9D;
+    font-size: 11px;
+    -fx-font-size: 11px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.status-badge-occupied {
+    background-color: rgba(239, 68, 68, 0.12);
+    -fx-background-color: rgba(239, 68, 68, 0.12);
+    padding: 3 10;
+    -fx-padding: 3 10;
+    -fx-background-radius: 12;
+}
+
+.status-badge-reserved {
+    -fx-text-fill: #A4BCD4;
+    font-size: 11px;
+    -fx-font-size: 11px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    background-color: rgba(99, 102, 241, 0.12);
+    -fx-background-color: rgba(99, 102, 241, 0.12);
+    padding: 3 10;
+    -fx-padding: 3 10;
+    -fx-background-radius: 12;
+}
+
+.status-badge-maintenance {
+    -fx-text-fill: #D18C9D;
+    font-size: 11px;
+    -fx-font-size: 11px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    background-color: rgba(245, 158, 11, 0.12);
+    -fx-background-color: rgba(245, 158, 11, 0.12);
+    padding: 3 10;
+    -fx-padding: 3 10;
+    -fx-background-radius: 12;
+}
+
+/* ─── Charts ──────────────────────────────────────────────── */
+.chart {
+    padding: 5;
+    -fx-padding: 5;
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.chart-plot-background {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.chart-content {
+    padding: 5;
+    -fx-padding: 5;
+}
+
+.chart-title {
+    -fx-text-fill: #2D3748;
+    font-size: 15px;
+    -fx-font-size: 15px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.axis {
+    -fx-tick-label-fill: #718096;
+    -fx-tick-mark-visible: false;
+    -fx-minor-tick-visible: false;
+}
+
+.axis-label {
+    -fx-text-fill: #718096;
+    font-size: 11px;
+    -fx-font-size: 11px;
+}
+
+.chart-series-line {
+    stroke: #B5A6D5;
+    -fx-stroke: #B5A6D5;
+    stroke-width: 2.5px;
+    -fx-stroke-width: 2.5px;
+}
+
+.chart-line-symbol {
+    background-color: #B5A6D5, #FAFAFA;
+    -fx-background-color: #B5A6D5, #FAFAFA;
+    -fx-background-radius: 5px;
+    padding: 4px;
+    -fx-padding: 4px;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    stroke: rgba(255, 255, 255, 0.03);
+    -fx-stroke: rgba(255, 255, 255, 0.03);
+}
+
+.chart-alternative-row-fill {
+    fill: transparent;
+    -fx-fill: transparent;
+    stroke: transparent;
+    -fx-stroke: transparent;
+}
+
+.chart-alternative-column-fill {
+    fill: transparent;
+    -fx-fill: transparent;
+    stroke: transparent;
+    -fx-stroke: transparent;
+}
+
+/* Bar Chart specific */
+.default-color0.chart-bar {
+    -fx-bar-fill: #B5A6D5;
+    -fx-background-radius: 3 3 0 0;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #A4BCD4;
+}
+
+/* PieChart */
+.default-color0.chart-pie {
+    -fx-pie-color: #8CB39D;
+}
+.default-color1.chart-pie {
+    -fx-pie-color: #D18C9D;
+}
+.default-color2.chart-pie {
+    -fx-pie-color: #A4BCD4;
+}
+.default-color3.chart-pie {
+    -fx-pie-color: #E8C17F;
+}
+
+.chart-legend {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #4A5568;
+}
+
+/* ─── Dashboard Content ───────────────────────────────────── */
+.dashboard-scroll {
+    background: transparent;
+    -fx-background: transparent;
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.dashboard-scroll > .viewport {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.dashboard-content {
+    padding: 32 36;
+    -fx-padding: 32 36;
+}
+
+.section-header {
+    -fx-text-fill: #1A202C;
+    font-size: 28px;
+    -fx-font-size: 28px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.accent-progress {
+    -fx-progress-color: #B5A6D5;
+}
+
+/* ─── Tables ──────────────────────────────────────────────── */
+.dark-table {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: rgba(255, 255, 255, 0.03);
+    -fx-selection-bar: rgba(0, 229, 255, 0.12);
+    -fx-selection-bar-non-focused: rgba(0, 229, 255, 0.06);
+}
+
+.dark-table .column-header-background {
+    background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark-table .column-header {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    border-color: transparent transparent rgba(255,255,255,0.05) transparent;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.05) transparent;
+}
+
+.dark-table .column-header .label {
+    -fx-text-fill: #718096;
+    font-size: 11px;
+    -fx-font-size: 11px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.dark-table .table-row-cell {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    border-color: transparent transparent rgba(255,255,255,0.02) transparent;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.02) transparent;
+}
+
+.dark-table .table-row-cell:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark-table .table-row-cell:selected {
+    background-color: rgba(0, 229, 255, 0.1);
+    -fx-background-color: rgba(0, 229, 255, 0.1);
+}
+
+.dark-table .table-cell {
+    -fx-text-fill: #cbd5e1;
+    font-size: 12px;
+    -fx-font-size: 12px;
+    padding: 8 10;
+    -fx-padding: 8 10;
+}
+
+.dark-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: #2D3748;
+}
+
+/* ─── Lists ───────────────────────────────────────────────── */
+.dark-list {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.dark-list .list-cell {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: #4A5568;
+    font-size: 12px;
+    -fx-font-size: 12px;
+    padding: 8 12;
+    -fx-padding: 8 12;
+    border-color: transparent transparent rgba(255,255,255,0.02) transparent;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.02) transparent;
+}
+
+.dark-list .list-cell:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark-list .list-cell:filled:selected {
+    background-color: rgba(0, 229, 255, 0.08);
+    -fx-background-color: rgba(0, 229, 255, 0.08);
+    -fx-text-fill: #2D3748;
+}
+
+.transparent-list {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    background: transparent;
+    -fx-background: transparent;
+}
+
+/* ─── Text Fields ─────────────────────────────────────────── */
+.text-field, .text-input {
+    background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-text-fill:  #2D3748;
+    -fx-prompt-text-fill: #A0AEC0;
+    border-color: rgba(0, 0, 0, 0.05);
+    -fx-border-color: rgba(0, 0, 0, 0.05);
+    border-width: 1;
+    -fx-border-width: 1;
+    border-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    padding: 10 14;
+    -fx-padding: 10 14;
+    font-size: 13px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    border-color: #B5A6D5;
+    -fx-border-color: #B5A6D5;
+    background-color: rgba(0, 229, 255, 0.03);
+    -fx-background-color: rgba(0, 229, 255, 0.03);
+    -fx-effect: dropshadow(gaussian, rgba(0,229,255,0.1), 8, 0, 0, 0);
+}
+
+.search-field {
+    background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-text-fill: #e2e8f0;
+    -fx-prompt-text-fill: #A0AEC0;
+    border-color: rgba(0, 0, 0, 0.05);
+    -fx-border-color: rgba(0, 0, 0, 0.05);
+    border-width: 1;
+    -fx-border-width: 1;
+    border-radius: 20;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    padding: 8 18;
+    -fx-padding: 8 18;
+    font-size: 13px;
+    -fx-font-size: 13px;
+}
+
+.search-field:focused {
+    border-color: #B5A6D5;
+    -fx-border-color: #B5A6D5;
+}
+
+/* ─── TextArea ────────────────────────────────────────────── */
+.dark-textarea {
+    background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-text-fill: #4A5568;
+    -fx-prompt-text-fill: #A0AEC0;
+    border-color: rgba(0, 0, 0, 0.08);
+    -fx-border-color: rgba(0, 0, 0, 0.08);
+    border-width: 1;
+    -fx-border-width: 1;
+    border-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    font-family: "Consolas", "Courier New", monospace;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    font-size: 12px;
+    -fx-font-size: 12px;
+}
+
+.dark-textarea .content {
+    background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark-textarea:focused {
+    border-color: rgba(0, 229, 255, 0.3);
+    -fx-border-color: rgba(0, 229, 255, 0.3);
+}
+
+/* ─── ComboBox ────────────────────────────────────────────── */
+.combo-box {
+    background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 0, 0, 0.05);
+    -fx-border-color: rgba(0, 0, 0, 0.05);
+    border-width: 1;
+    -fx-border-width: 1;
+    border-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    padding: 2;
+    -fx-padding: 2;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #e2e8f0;
+    font-size: 13px;
+    -fx-font-size: 13px;
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    border-color: rgba(255,255,255,0.1);
+    -fx-border-color: rgba(255,255,255,0.1);
+    border-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 5);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #cbd5e1;
+    padding: 8 12;
+    -fx-padding: 8 12;
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    background-color: rgba(0, 229, 255, 0.08);
+    -fx-background-color: rgba(0, 229, 255, 0.08);
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+    background-color: rgba(0, 229, 255, 0.12);
+    -fx-background-color: rgba(0, 229, 255, 0.12);
+    -fx-text-fill: #2D3748;
+}
+
+.combo-box .arrow-button {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    background-color: #718096;
+    -fx-background-color: #718096;
+}
+
+/* ─── DatePicker ──────────────────────────────────────────── */
+.date-picker {
+    background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 0, 0, 0.05);
+    -fx-border-color: rgba(0, 0, 0, 0.05);
+    border-width: 1;
+    -fx-border-width: 1;
+    border-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.date-picker .text-field {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    border-width: 0;
+    -fx-border-width: 0;
+}
+
+.date-picker .arrow-button {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup {
+    background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    border-color: rgba(255,255,255,0.1);
+    -fx-border-color: rgba(255,255,255,0.1);
+    border-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 5);
+}
+
+.date-picker-popup .day-cell {
+    -fx-text-fill: #cbd5e1;
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup .day-cell:hover {
+    background-color: rgba(0, 229, 255, 0.1);
+    -fx-background-color: rgba(0, 229, 255, 0.1);
+}
+
+.date-picker-popup .selected {
+    background-color: #B5A6D5;
+    -fx-background-color: #B5A6D5;
+    -fx-text-fill: #FAFAFA;
+}
+
+/* ─── CheckBox ────────────────────────────────────────────── */
+.vip-checkbox {
+    -fx-text-fill: #4A5568;
+    font-size: 13px;
+    -fx-font-size: 13px;
+}
+
+.vip-checkbox .box {
+    background-color: rgba(0, 0, 0, 0.02);
+    -fx-background-color: rgba(0, 0, 0, 0.02);
+    border-color: rgba(255, 255, 255, 0.15);
+    -fx-border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.vip-checkbox:selected .box {
+    background-color: #B5A6D5;
+    -fx-background-color: #B5A6D5;
+    border-color: #B5A6D5;
+    -fx-border-color: #B5A6D5;
+}
+
+.vip-checkbox:selected .mark {
+    background-color: #FAFAFA;
+    -fx-background-color: #FAFAFA;
+}
+
+/* ─── ScrollBar ───────────────────────────────────────────── */
+.scroll-bar {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .thumb:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    padding: 0;
+    -fx-padding: 0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    padding: 0;
+    -fx-padding: 0;
+}
+
+/* ─── Separator ───────────────────────────────────────────── */
+.separator .line {
+    border-color: rgba(255, 255, 255, 0.04);
+    -fx-border-color: rgba(255, 255, 255, 0.04);
+}
+
+/* ─── Progress Indicator ──────────────────────────────────── */
+.progress-indicator .indicator {
+    border-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* ─── Status & Error Text ─────────────────────────────────── */
+.status-text {
+    -fx-text-fill: #8CB39D;
+    font-size: 12px;
+    -fx-font-size: 12px;
+}
+
+.error-text {
+    -fx-text-fill: #D18C9D;
+    font-size: 12px;
+    -fx-font-size: 12px;
+}
+
+/* ─── Tooltip ─────────────────────────────────────────────── */
+.tooltip {
+    background-color: #1e293b;
+    -fx-background-color: #1e293b;
+    -fx-text-fill: #e2e8f0;
+    font-size: 12px;
+    -fx-font-size: 12px;
+    -fx-background-radius: 6;
+    border-radius: 6;
+    -fx-border-radius: 6;
+    border-color: rgba(255,255,255,0.08);
+    -fx-border-color: rgba(255,255,255,0.08);
+    padding: 6 12;
+    -fx-padding: 6 12;
+}
+
+/* ─── Dialog / Alert ──────────────────────────────────────── */
+.dialog-pane {
+    background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.05);
+    -fx-border-color: rgba(0, 0, 0, 0.05);
+}
+
+.dialog-pane .header-panel {
+    background-color: #F3F4F6;
+    -fx-background-color: #F3F4F6;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #4A5568;
+    font-size: 13px;
+    -fx-font-size: 13px;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-text-fill: #2D3748;
+    font-size: 15px;
+    -fx-font-size: 15px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+
+
+.text-field, .text-input, .combo-box {
+    -fx-text-fill: #2D3748 !important;
+}
+.combo-box .list-cell {
+    -fx-text-fill: #2D3748;
+}
+.button {
+    -fx-text-fill: #FFFFFF !important;
+}
+.nav-button {
+    -fx-text-fill: #4A5568 !important;
+}
+.nav-button:selected, .nav-button:hover {
+    -fx-text-fill: #B5A6D5 !important;
+}
+
+/* =========================================================================
+   VISIBILITY AND CONTRAST PATCH FOR LIGHT FLORAL THEME
+   ========================================================================= */
+
+/* Make all standard text elements dark by default */
+.label, .text, .check-box, .radio-button {
+    -fx-text-fill: #2D3748 !important;
+}
+
+/* Fix TableView Visibility */
+.table-view {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+.table-view .column-header, .table-view .column-header .label {
+    -fx-text-fill: #4A5568 !important;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+.table-row-cell, .table-cell {
+    -fx-text-fill: #2D3748 !important;
+}
+.table-row-cell:odd {
+    background-color: rgba(0, 0, 0, 0.02);
+    -fx-background-color: rgba(0, 0, 0, 0.02);
+}
+.table-row-cell:selected {
+    background-color: #B5A6D5 !important;
+    -fx-background-color: #B5A6D5 !important;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white !important;
+}
+
+/* Fix Buttons */
+.button {
+    -fx-text-fill: #2D3748; /* Default button text dark */
+}
+.accent-button {
+    -fx-text-fill: white !important; /* Lavender button has white text */
+}
+.warning-button {
+    -fx-text-fill: #2D3748 !important; /* Peach/gold button needs dark text */
+}
+.danger-button {
+    -fx-text-fill: white !important; /* Rose pink supports white text */
+}
+
+/* Filter buttons on Room Management */
+.filter-button {
+    background-color: white;
+    -fx-background-color: white;
+    border-color: rgba(0,0,0,0.1);
+    -fx-border-color: rgba(0,0,0,0.1);
+    -fx-text-fill: #4A5568 !important; 
+    border-radius: 20;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+.filter-button:hover {
+    background-color: rgba(0,0,0,0.03);
+    -fx-background-color: rgba(0,0,0,0.03);
+}
+.filter-button.selected {
+    background-color: #B5A6D5;
+    -fx-background-color: #B5A6D5;
+    -fx-text-fill: white !important;
+}
+
+/* Checkboxes and text inputs */
+.check-box .box {
+    background-color: white;
+    -fx-background-color: white;
+    border-color: #B5A6D5;
+    -fx-border-color: #B5A6D5;
+}
+.check-box .mark {
+    -fx-shape: "M1,4 L3,6 L7,1 L8,2 L3,8 L0,5 Z";
+    background-color: #B5A6D5;
+    -fx-background-color: #B5A6D5;
+}
+
+/* Room Cards Text visibility */
+.room-card .label {
+    -fx-text-fill: #2D3748 !important;
+}
+.room-number-text {
+    -fx-text-fill: #1A202C !important;
+}
+
+/* Status text on settings */
+.status-text {
+    -fx-text-fill: #2D3748 !important;
+}
+
+/* Explicitly fix any label inside a box that was explicitly styled gray */
+* {
+    -fx-text-background-color: #2D3748;
+}
+
+
+/* =========================================================================
+   DROPDOWN AND LISTVIEW VISIBILITY PATCH
+   ========================================================================= */
+
+/* ComboBox dropdown popup styling */
+.combo-box-popup .list-view {
+    background-color: white !important;
+    -fx-background-color: white !important;
+    border-color: #A0AEC0 !important;
+    -fx-border-color: #A0AEC0 !important;
+}
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #2D3748 !important;
+    background-color: transparent !important;
+    -fx-background-color: transparent !important;
+    padding: 8 12 8 12;
+    -fx-padding: 8 12 8 12;
+}
+.combo-box-popup .list-view .list-cell:filled:hover {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    -fx-background-color: rgba(0, 0, 0, 0.05) !important;
+    -fx-text-fill: #2D3748 !important;
+}
+.combo-box-popup .list-view .list-cell:filled:selected,
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    background-color: #B5A6D5 !important;
+    -fx-background-color: #B5A6D5 !important;
+    -fx-text-fill: white !important;
+}
+
+/* General ListView and ListCell overrides */
+.list-cell {
+    -fx-text-fill: #2D3748 !important;
+}
+.list-cell:selected {
+    background-color: #B5A6D5 !important;
+    -fx-background-color: #B5A6D5 !important;
+    -fx-text-fill: white !important;
+}
+
+/* DatePicker popup styling (since Bookings uses them) */
+.date-picker-popup {
+    background-color: white !important;
+    -fx-background-color: white !important;
+}
+.date-picker-popup .month-year-pane {
+    background-color: transparent !important;
+    -fx-background-color: transparent !important;
+}
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #2D3748 !important;
+}
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: #718096 !important;
+}
+.date-picker-popup .day-name-cell {
+    -fx-text-fill: #4A5568 !important;
+}
+.date-picker-popup .date-cell {
+    -fx-text-fill: #2D3748 !important;
+    background-color: transparent !important;
+    -fx-background-color: transparent !important;
+}
+.date-picker-popup .date-cell:hover {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    -fx-background-color: rgba(0, 0, 0, 0.05) !important;
+}
+.date-picker-popup .selected-date {
+    background-color: #B5A6D5 !important;
+    -fx-background-color: #B5A6D5 !important;
+    -fx-text-fill: white !important;
+}
+

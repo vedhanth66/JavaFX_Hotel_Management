@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.zenith.SettingsController"
+            fitToWidth="true" styleClass="dashboard-scroll">
+    <VBox spacing="30" styleClass="dashboard-content">
+
+        <Label text="Settings" styleClass="section-header" />
+
+        <!-- Hotel Information -->
+        <VBox styleClass="glass-card" spacing="15">
+            <Label text="Hotel Information" styleClass="chart-title" />
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Hotel Name" styleClass="card-title" />
+                    <TextField fx:id="hotelNameField" />
+                </VBox>
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Currency" styleClass="card-title" />
+                    <ComboBox fx:id="currencyCombo" maxWidth="Infinity" />
+                </VBox>
+            </HBox>
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Contact Email" styleClass="card-title" />
+                    <TextField fx:id="contactEmailField" />
+                </VBox>
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Phone" styleClass="card-title" />
+                    <TextField fx:id="contactPhoneField" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <!-- Room Rate Configuration -->
+        <VBox styleClass="glass-card" spacing="15">
+            <Label text="Room Rate Configuration" styleClass="chart-title" />
+            <HBox spacing="20">
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Standard Room (per night)" styleClass="card-title" />
+                    <TextField fx:id="rateStandard" text="120.00" />
+                </VBox>
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Deluxe Room (per night)" styleClass="card-title" />
+                    <TextField fx:id="rateDeluxe" text="200.00" />
+                </VBox>
+            </HBox>
+            <HBox spacing="20">
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Suite (per night)" styleClass="card-title" />
+                    <TextField fx:id="rateSuite" text="350.00" />
+                </VBox>
+                <VBox spacing="8" HBox.hgrow="ALWAYS">
+                    <Label text="Penthouse (per night)" styleClass="card-title" />
+                    <TextField fx:id="ratePenthouse" text="600.00" />
+                </VBox>
+            </HBox>
+            <HBox spacing="15" alignment="CENTER_RIGHT">
+                <Button text="Apply Rates" onAction="#handleApplyRates" styleClass="accent-button" />
+            </HBox>
+        </VBox>
+
+        <!-- Preferences -->
+        <VBox styleClass="glass-card" spacing="15">
+            <Label text="Preferences" styleClass="chart-title" />
+            <HBox spacing="40">
+                <VBox spacing="12">
+                    <CheckBox fx:id="chkEmailNotif" text="Email Notifications" selected="true" styleClass="vip-checkbox" />
+                    <CheckBox fx:id="chkSoundNotif" text="Sound Alerts" selected="true" styleClass="vip-checkbox" />
+                    <CheckBox fx:id="chkAutoCheckout" text="Auto Check-out Reminders" selected="true" styleClass="vip-checkbox" />
+                </VBox>
+                <VBox spacing="12">
+                    <CheckBox fx:id="chkDarkMode" text="Dark Mode" selected="true" styleClass="vip-checkbox" />
+                    <CheckBox fx:id="chkAnimations" text="UI Animations" selected="true" styleClass="vip-checkbox" />
+                    <CheckBox fx:id="chkCompactView" text="Compact Room View" styleClass="vip-checkbox" />
+                </VBox>
+            </HBox>
+            <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-padding: 10 0 0 0;">
+                <Button text="Save Info &amp; Preferences" onAction="#handleSaveSettings" styleClass="accent-button" />
+            </HBox>
+        </VBox>
+
+        <!-- Room Maintenance -->
+        <VBox styleClass="glass-card" spacing="15">
+            <Label text="Room Maintenance Control" styleClass="chart-title" />
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <ComboBox fx:id="maintenanceRoomCombo" promptText="Select Room..." prefWidth="200" />
+                <Button text="Set Maintenance" onAction="#handleSetMaintenance" styleClass="warning-button" />
+                <Button text="Clear Maintenance" onAction="#handleClearMaintenance" styleClass="nav-button" />
+            </HBox>
+            <Label fx:id="maintenanceStatus" text="" styleClass="status-text" />
+        </VBox>
+
+        <!-- About -->
+        <VBox styleClass="glass-card" spacing="10">
+            <Label text="About" styleClass="chart-title" />
+            <Label text="OOSD Hotel Management Suite v2.0" styleClass="card-title" />
+            <Label text="Built with JavaFX 21 | Premium Hotel Management Solution" style="-fx-text-fill: #64748b; -fx-font-size: 12px;" />
+            <Label text="© 2026 OOSD Hotels International. All rights reserved." style="-fx-text-fill: #475569; -fx-font-size: 11px;" />
+        </VBox>
+
+        <Label fx:id="settingsStatus" text="" styleClass="status-text" />
+
+    </VBox>
+</ScrollPane>

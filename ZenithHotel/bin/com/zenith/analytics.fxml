@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.zenith.AnalyticsController"
+            fitToWidth="true" styleClass="dashboard-scroll">
+    <VBox spacing="30" styleClass="dashboard-content">
+
+        <Label text="Analytics Dashboard" styleClass="section-header" />
+
+        <!-- Key Metrics Row -->
+        <HBox spacing="15">
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="TOTAL REVENUE" styleClass="card-title" />
+                <Label fx:id="totalRevenueLabel" text="0" styleClass="card-value-success" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="AVG OCCUPANCY" styleClass="card-title" />
+                <Label fx:id="avgOccupancyLabel" text="0%" styleClass="card-value-accent" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="AVG STAY" styleClass="card-title" />
+                <Label fx:id="avgStayLabel" text="0 nights" styleClass="card-value" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="TOTAL BOOKINGS" styleClass="card-title" />
+                <Label fx:id="totalBookingsLabel" text="0" styleClass="card-value" />
+            </VBox>
+        </HBox>
+
+        <!-- Charts Row 1 -->
+        <HBox spacing="20">
+            <VBox styleClass="glass-card" HBox.hgrow="ALWAYS" minHeight="350">
+                <Label text="Revenue by Room Type" styleClass="chart-title" />
+                <BarChart fx:id="revenueByTypeChart" legendVisible="false" 
+                          verticalGridLinesVisible="false" horizontalGridLinesVisible="false"
+                          VBox.vgrow="ALWAYS">
+                    <xAxis><CategoryAxis side="BOTTOM" /></xAxis>
+                    <yAxis><NumberAxis side="LEFT" /></yAxis>
+                </BarChart>
+            </VBox>
+
+            <VBox styleClass="glass-card" prefWidth="380" minHeight="350">
+                <Label text="Room Type Distribution" styleClass="chart-title" />
+                <PieChart fx:id="roomTypeChart" legendVisible="true" labelsVisible="false"
+                          VBox.vgrow="ALWAYS" />
+            </VBox>
+        </HBox>
+
+        <!-- Charts Row 2 -->
+        <HBox spacing="20">
+            <VBox styleClass="glass-card" HBox.hgrow="ALWAYS" minHeight="350">
+                <Label text="Booking Volume by Type" styleClass="chart-title" />
+                <BarChart fx:id="bookingVolumeChart" legendVisible="false"
+                          verticalGridLinesVisible="false" horizontalGridLinesVisible="false"
+                          VBox.vgrow="ALWAYS">
+                    <xAxis><CategoryAxis side="BOTTOM" /></xAxis>
+                    <yAxis><NumberAxis side="LEFT" /></yAxis>
+                </BarChart>
+            </VBox>
+
+            <VBox styleClass="glass-card" prefWidth="380" minHeight="350">
+                <Label text="Room Status Overview" styleClass="chart-title" />
+                <PieChart fx:id="statusChart" legendVisible="true" labelsVisible="false"
+                          VBox.vgrow="ALWAYS" />
+            </VBox>
+        </HBox>
+
+        <!-- Booking Table -->
+        <VBox styleClass="glass-card" minHeight="300">
+            <Label text="All Bookings" styleClass="chart-title" />
+            <TableView fx:id="bookingTable" styleClass="dark-table" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colBookingId" text="ID" prefWidth="60" />
+                    <TableColumn fx:id="colBookingGuest" text="Guest" prefWidth="160" />
+                    <TableColumn fx:id="colBookingRoom" text="Room" prefWidth="80" />
+                    <TableColumn fx:id="colBookingCheckIn" text="Check-in" prefWidth="110" />
+                    <TableColumn fx:id="colBookingCheckOut" text="Check-out" prefWidth="110" />
+                    <TableColumn fx:id="colBookingStatus" text="Status" prefWidth="100" />
+                    <TableColumn fx:id="colBookingAmount" text="Amount" prefWidth="100" />
+                </columns>
+            </TableView>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

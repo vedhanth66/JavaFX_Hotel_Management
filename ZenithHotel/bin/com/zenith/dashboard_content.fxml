@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.zenith.DashboardContentController"
+            fitToWidth="true" styleClass="dashboard-scroll">
+    <VBox spacing="25" styleClass="dashboard-content">
+        
+        <Label text="Dashboard Overview" styleClass="section-header" />
+        
+        <!-- Stats Row -->
+        <HBox spacing="15">
+            <VBox styleClass="glass-card" style="-fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="OCCUPANCY" styleClass="card-title" />
+                <Label fx:id="occupancyValue" text="—" styleClass="card-value" />
+                <Label fx:id="occupancyDelta" text="" styleClass="room-status-available" />
+                <ProgressIndicator fx:id="occupancyProgress" progress="0" maxWidth="40" styleClass="accent-progress" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="TOTAL REVENUE" styleClass="card-title" />
+                <Label fx:id="revenueValue" text="—" styleClass="card-value-success" />
+                <Label fx:id="revenueDelta" text="" styleClass="room-status-available" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="ACTIVE BOOKINGS" styleClass="card-title" />
+                <Label fx:id="bookingsValue" text="—" styleClass="card-value-accent" />
+                <Label fx:id="bookingsDelta" text="" styleClass="room-status-available" />
+            </VBox>
+        </HBox>
+
+        <!-- Quick Actions -->
+        <HBox spacing="12">
+            <Button text="Quick Check-In" onAction="#handleQuickCheckIn" styleClass="accent-button" />
+            <Button text="Quick Check-Out" onAction="#handleQuickCheckOut" styleClass="nav-button" />
+            <Button text="+ New Booking" onAction="#handleQuickBooking" styleClass="accent-button" />
+        </HBox>
+        
+        <!-- Chart Row -->
+        <HBox spacing="20" VBox.vgrow="ALWAYS">
+            <VBox styleClass="glass-card" HBox.hgrow="ALWAYS" minHeight="380">
+                <Label text="Revenue Trends" styleClass="chart-title" />
+                <LineChart fx:id="revenueChart" legendVisible="false" verticalGridLinesVisible="false" horizontalGridLinesVisible="false"
+                           VBox.vgrow="ALWAYS">
+                    <xAxis><CategoryAxis side="BOTTOM" /></xAxis>
+                    <yAxis><NumberAxis side="LEFT" /></yAxis>
+                </LineChart>
+            </VBox>
+            
+            <VBox spacing="20" prefWidth="340">
+                <VBox styleClass="glass-card" minHeight="180">
+                    <Label text="Room Status" styleClass="chart-title" />
+                    <PieChart fx:id="roomStatusPie" legendVisible="false" labelsVisible="false"
+                              VBox.vgrow="ALWAYS" maxHeight="150" />
+                </VBox>
+                
+                <VBox styleClass="glass-card" VBox.vgrow="ALWAYS">
+                    <Label text="Live Activity" styleClass="chart-title" />
+                    <ListView fx:id="checkInList" styleClass="dark-list" VBox.vgrow="ALWAYS" />
+                </VBox>
+            </VBox>
+        </HBox>
+        
+    </VBox>
+</ScrollPane>

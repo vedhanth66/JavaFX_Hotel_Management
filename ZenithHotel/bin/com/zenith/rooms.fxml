@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.zenith.RoomController"
+      spacing="20" styleClass="dashboard-content">
+
+    <!-- Header -->
+    <HBox spacing="20" alignment="CENTER_LEFT">
+        <Label text="Room Management" styleClass="section-header" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label fx:id="roomCountLabel" text="" style="-fx-text-fill: #64748b; -fx-font-size: 14px;" />
+        <Button text="+ Add Booking" onAction="#handleAddBooking" styleClass="accent-button" />
+    </HBox>
+
+    <!-- Filters -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button fx:id="btnAll" text="All" onAction="#handleFilterAll" styleClass="filter-button" />
+        <Button fx:id="btnAvailable" text="Available" onAction="#handleFilterAvailable" styleClass="filter-button" />
+        <Button fx:id="btnOccupied" text="Occupied" onAction="#handleFilterOccupied" styleClass="filter-button" />
+        <Button fx:id="btnMaintenance" text="Maintenance" onAction="#handleFilterMaintenance" styleClass="filter-button" />
+        <Region HBox.hgrow="ALWAYS" />
+        <ComboBox fx:id="floorFilter" prefWidth="140" />
+    </HBox>
+
+    <!-- Room Grid (scrollable) -->
+    <ScrollPane fitToWidth="true" styleClass="dashboard-scroll" VBox.vgrow="ALWAYS">
+        <TilePane fx:id="roomGrid" hgap="15" vgap="15" prefColumns="5" styleClass="transparent-list"
+                  style="-fx-padding: 5;">
+            <!-- Room cards will be added dynamically -->
+        </TilePane>
+    </ScrollPane>
+
+</VBox>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.zenith.AdminController"
+            fitToWidth="true" styleClass="dashboard-scroll">
+    <VBox spacing="30" styleClass="dashboard-content">
+
+        <Label text="Admin Control Panel" styleClass="section-header" />
+
+        <!-- Admin Profile -->
+        <HBox spacing="20">
+            <VBox styleClass="glass-card" HBox.hgrow="ALWAYS" spacing="10">
+                <Label text="ADMIN PROFILE" styleClass="card-title" />
+                <Label text="Administrator" styleClass="card-value" />
+                <Label text="Role: Hotel Manager" styleClass="room-status-available" />
+                <Label text="Access Level: Full Control" style="-fx-text-fill: #00f2ff; -fx-font-size: 12px;" />
+            </VBox>
+            <VBox styleClass="glass-card" HBox.hgrow="ALWAYS" spacing="10">
+                <Label text="SYSTEM UPTIME" styleClass="card-title" />
+                <Label fx:id="uptimeLabel" text="Session Active" styleClass="card-value-accent" />
+                <Label fx:id="lastActionLabel" text="" style="-fx-text-fill: #64748b; -fx-font-size: 12px;" />
+            </VBox>
+        </HBox>
+
+        <!-- System Stats -->
+        <HBox spacing="15">
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="TOTAL ROOMS" styleClass="card-title" />
+                <Label fx:id="totalRoomsLabel" text="0" styleClass="card-value" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="TOTAL GUESTS" styleClass="card-title" />
+                <Label fx:id="totalGuestsLabel" text="0" styleClass="card-value" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="TOTAL BOOKINGS" styleClass="card-title" />
+                <Label fx:id="totalBookingsLabel" text="0" styleClass="card-value" />
+            </VBox>
+            <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+                <Label text="TOTAL REVENUE" styleClass="card-title" />
+                <Label fx:id="totalRevenueLabel" text="0" styleClass="card-value-success" />
+            </VBox>
+        </HBox>
+
+        <!-- Quick Actions -->
+        <VBox styleClass="glass-card" spacing="15">
+            <Label text="Quick Actions" styleClass="chart-title" />
+            <HBox spacing="15">
+                <Button text="Generate Report" onAction="#handleGenerateReport" styleClass="accent-button" />
+                <Button text="Export Summary" onAction="#handleExportSummary" styleClass="nav-button" />
+                <Button text="Refresh Stats" onAction="#handleRefreshStats" styleClass="nav-button" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Button text="Reset All Data" onAction="#handleResetData" styleClass="danger-button" />
+            </HBox>
+        </VBox>
+
+        <!-- Activity Log and Report side by side -->
+        <HBox spacing="20" VBox.vgrow="ALWAYS">
+            <VBox styleClass="glass-card" HBox.hgrow="ALWAYS" spacing="10" minHeight="350">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Activity Log" styleClass="chart-title" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button text="Clear Log" onAction="#handleClearLog" styleClass="nav-button" style="-fx-font-size: 11px;" />
+                </HBox>
+                <ListView fx:id="activityLogList" styleClass="dark-list" VBox.vgrow="ALWAYS" />
+            </VBox>
+
+            <VBox styleClass="glass-card" prefWidth="400" spacing="10" minHeight="350">
+                <Label text="Generated Report" styleClass="chart-title" />
+                <TextArea fx:id="reportArea" styleClass="dark-textarea" 
+                          VBox.vgrow="ALWAYS" editable="false" wrapText="true"
+                          promptText="Click 'Generate Report' to see system summary..." />
+            </VBox>
+        </HBox>
+
+    </VBox>
+</ScrollPane>

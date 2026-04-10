@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.zenith.GuestController"
+      spacing="20" styleClass="dashboard-content">
+
+    <!-- Header -->
+    <HBox spacing="20" alignment="CENTER_LEFT">
+        <Label text="Guest Management" styleClass="section-header" />
+        <Region HBox.hgrow="ALWAYS" />
+        <TextField fx:id="searchField" promptText="Search guests..." styleClass="search-field" prefWidth="280" />
+        <Button text="+ Add Guest" onAction="#handleAddGuest" styleClass="accent-button" />
+    </HBox>
+
+    <!-- Stats Row -->
+    <HBox spacing="15">
+        <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+            <Label text="TOTAL GUESTS" styleClass="card-title" />
+            <Label fx:id="totalGuestsLabel" text="0" styleClass="card-value" />
+        </VBox>
+        <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+            <Label text="VIP GUESTS" styleClass="card-title" />
+            <Label fx:id="vipGuestsLabel" text="0" styleClass="card-value-accent" />
+        </VBox>
+        <VBox styleClass="glass-card" style="-fx-alignment: center; -fx-spacing: 6;" HBox.hgrow="ALWAYS">
+            <Label text="TOTAL REVENUE" styleClass="card-title" />
+            <Label fx:id="totalRevenueLabel" text="0" styleClass="card-value-success" />
+        </VBox>
+    </HBox>
+
+    <!-- Guest Table -->
+    <VBox styleClass="glass-card" VBox.vgrow="ALWAYS">
+        <TableView fx:id="guestTable" styleClass="dark-table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="60" />
+                <TableColumn fx:id="colName" text="Full Name" prefWidth="180" />
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="200" />
+                <TableColumn fx:id="colPhone" text="Phone" prefWidth="140" />
+                <TableColumn fx:id="colNationality" text="Nationality" prefWidth="120" />
+                <TableColumn fx:id="colVip" text="Status" prefWidth="80" />
+                <TableColumn fx:id="colStays" text="Stays" prefWidth="60" />
+                <TableColumn fx:id="colSpent" text="Total Spent" prefWidth="110" />
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Bottom Actions -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <Button fx:id="btnEditGuest" text="Edit Selected" onAction="#handleEditGuest" styleClass="nav-button" />
+        <Button fx:id="btnDeleteGuest" text="Delete Selected" onAction="#handleDeleteGuest" styleClass="danger-button" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label fx:id="statusLabel" text="" styleClass="status-text" />
+    </HBox>
+
+</VBox>
