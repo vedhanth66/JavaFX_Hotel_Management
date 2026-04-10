@@ -1,61 +1,21 @@
-# Compiled class files
-*.class
-
-# Logs
-*.log
-
-# Package files
-*.jar
-*.war
-*.ear
-
-# JVM crash logs
-hs_err_pid*
-
-# Build folders
+# Build output
 /target/
 /build/
 /out/
 
-# Maven
-/.mvn/wrapper/maven-wrapper.jar
-
-# Gradle
-.gradle/
-build/
+# Compiled files
+*.class
 
 # IntelliJ IDEA
 .idea/
 *.iml
-*.iws
-*.ipr
 
-# VS Code
-.vscode/
+# Logs
+*.log
 
-# Eclipse
-.project
-.classpath
-.settings/
-
-# NetBeans
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-# OS files
+# OS junk
 .DS_Store
 Thumbs.db
 
-# JavaFX specific (if using SDK locally)
+# Local JavaFX SDK (if you added it manually)
 javafx-sdk/
-lib/
-
-# Environment files
-.env
-
-# Temporary files
-*.tmp
-*.swp
